@@ -17,7 +17,7 @@ setMethod("initialize", "Estimator1", function(.Object, MPC, H, x_vector, y_vect
   clean_data <- na.omit(raw_data)
   
   data <- matrix(data = NA, nrow=nrow(clean_data),ncol=ncol(clean_data))
-  
+
   data <- clean_data
   
   MPC <- numeric(length(input_argument))
@@ -39,6 +39,7 @@ setMethod("kernel.smoother", signature = "Estimator1", function (object) {
   n <- nrow(object@data)
   
   Input <- object@input_argument
+  Data <- matrix(data = NA, nrow=nrow(clean_data),ncol=ncol(clean_data))
   Data <- object@data
   h <- object@H
   
