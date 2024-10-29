@@ -8,31 +8,35 @@ setClass("Parzen.smoother",representation(Data = "numeric",
          prototype = list(h = NA_real_, input = NA_real_))
 
 ################################################################################
+setGeneric("initialize2", function(object, Data, h = NA_real_, Probs, input = NA_real_) { 
+  standardGeneric("initialize2") 
+})
 
-setMethod("initialize2", "Parzen.smoother",
-          function(.Object, Data, h = NA_real_, Probs, input = NA_real_) {
-            
-            Data <- as.numeric(Data)
-            Data <- na.omit(Data)
-            if (length(Data) == 0) { stop("Data set is empty")} 
-            
-            Probs <- numeric(length(Data)) 
-            
-            if (all(is.na(input))) { input <- Data }
-            
-            if (is.na(h)) {
-              s <- sd(Data)
-              inter_q <- IQR(Data)
-              n <- length(Data)
-              h <- 1.06 * min(s, inter_q / 1.349) * n^(-1/5)
-            }
-            
-            if (!is.na(h) && h == 0) { stop(" h cannot be zero ") }
-            
-            .Object <- callNextMethod(.Object, Data = Data, h = h, Probs = Probs, input = input)
-            
-            return(.Object)
-          })
+setMethod("initialize2", signature(object = "Parzen.smoother"), function(object, Data, h = NA_real_, Probs, input = NA_real_) {
+  
+  Data <- as.numeric(Data)
+  Data <- na.omit(Data)
+  if (length(Data) == 0) { stop("Data set is empty") } 
+  
+  Probs <- numeric(length(Data)) 
+  
+  if (all(is.na(input))) { input <- Data }
+  
+  if (is.na(h)) {
+    s <- sd(Data)
+    inter_q <- IQR(Data)
+    n <- length(Data)
+    h <- 1.06 * min(s, inter_q / 1.349) * n^(-1/5)
+  }
+  
+  if (!is.na(h) && h == 0) { stop("h cannot be zero") }
+  
+  object <- callNextMethod(object, Data = Data, h = h, Probs = Probs, input = input)
+  
+  return(object)
+})
+
+
 
 ################################################################################
 
@@ -63,11 +67,7 @@ setMethod("Parzen.creator", signature= "Parzen.smoother", function(object){
 setGeneric("show2", function(object) { standardGeneric("show2")})
 setMethod("show2", signature = "Parzen.smoother", function(object) {
   
-  plot(object@input, object@Probs, type = "p", col = "blue", lwd = 2,
-       ylim = range(0, max(object@Probs)),
-       xlim = range(object@input),
-       main = "Parzen Rosenblatt",
-       xlab = "input", ylab = "Probability")  
+  plot(object@input, object@Probs)
   
   precision <- 8
   
