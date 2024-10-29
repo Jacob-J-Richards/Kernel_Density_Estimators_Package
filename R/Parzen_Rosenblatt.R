@@ -1,4 +1,4 @@
-
+#this one works as of October 29 at 3:43 PM
 ################################################################################
 
 setClass("Parzen.smoother",representation(Data = "numeric",
