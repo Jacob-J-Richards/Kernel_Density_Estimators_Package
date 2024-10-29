@@ -20,5 +20,7 @@
 ## test code:
 
     Priestley_Chao(seq(-3.14,3.14,by=.1),cos(seq(-3.14,3.14,by=.1)),1,seq(-3.14,3.14,by=.01))
+    
     Parzen_Rosenblatt(rnorm(100),1,seq(-3,3,length.out=500)) 
+    
     Nadaraya_Watson(seq(-3.14,3.14,by=.1),cos(seq(-3.14,3.14,by=.1)),1,seq(-3.14,3.14,by=.01))
