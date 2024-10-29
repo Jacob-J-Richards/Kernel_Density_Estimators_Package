@@ -1,11 +1,3 @@
-#'input your arguments as such:
-#'Parzen_Rosenblatt(user_data,user_input_h,user_input)
-#'You may input NA for h and for user_input_arg in which case 
-#'h will be produced by: 1.06min(s, inter_q / 1.349) * n^(-1/5)
-#'and the function will be evaluated at the data points 
-#' 
-#' @export
-Parzen_Rosenblatt <- function(user_data,user_input_h,user_input_arg) {
 
 ################################################################################
 
@@ -95,9 +87,16 @@ setMethod("show", signature = "Parzen.smoother", function(object) {
 
 ################################################################################
 
-object <- new("Parzen.smoother", Data = user_data, input = user_input_arg, h = user_input_h)
-show(Parzen.creator(object))
+#'input your arguments as such:
+#'Parzen_Rosenblatt(user_data,user_input_h,user_input)
+#'You may input NA for h and for user_input_arg in which case 
+#'h will be produced by: 1.06min(s, inter_q / 1.349) * n^(-1/5)
+#'and the function will be evaluated at the data points 
+#'
+#' @export
+Parzen_Rosenblatt <- function(user_data,user_input_h,user_input_arg) {
+  object <- new("Parzen.smoother", Data = user_data, input = user_input_arg, h = user_input_h)
+  show(Parzen.creator(object))
+}
 
 ################################################################################
-
-}
