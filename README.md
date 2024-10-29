@@ -19,15 +19,6 @@
 
 ## test code:
 
-    x=seq(-3.14,3.14,by=.1)
-    y=cos(x)
-    input = seq(-3.14,3.14,by=.01)
-    Priestley_Chao(x,y,1,input)
-
+    Priestley_Chao(seq(-3.14,3.14,by=.1),cos(seq(-3.14,3.14,by=.1)),1,seq(-3.14,3.14,by=.01))
     Parzen_Rosenblatt(rnorm(100),1,seq(-3,3,length.out=500)) 
-
-    x=seq(-3.14,3.14,by=.1)
-    y=cos(x)
-    input = seq(-3.14,3.14,by=.01)
-    Nadaraya_Watson(x,y,1,x)
-    
+    Nadaraya_Watson(seq(-3.14,3.14,by=.1),cos(seq(-3.14,3.14,by=.1)),1,seq(-3.14,3.14,by=.01))
