@@ -9,7 +9,7 @@ setClass("Parzen.smoother",representation(Data = "numeric",
 
 ################################################################################
 
-setMethod("initialize", "Parzen.smoother",
+setMethod("initialize2", "Parzen.smoother",
           function(.Object, Data, h = NA_real_, Probs, input = NA_real_) {
             
             Data <- as.numeric(Data)
@@ -60,8 +60,8 @@ setMethod("Parzen.creator", signature= "Parzen.smoother", function(object){
 
 ################################################################################
 
-setGeneric("show", function(object) { standardGeneric("show")})
-setMethod("show", signature = "Parzen.smoother", function(object) {
+setGeneric("show2", function(object) { standardGeneric("show2")})
+setMethod("show2", signature = "Parzen.smoother", function(object) {
   
   plot(object@input, object@Probs, type = "p", col = "blue", lwd = 2,
        ylim = range(0, max(object@Probs)),
@@ -96,7 +96,7 @@ setMethod("show", signature = "Parzen.smoother", function(object) {
 #' @export
 Parzen_Rosenblatt <- function(user_data,user_input_h,user_input_arg) {
   object <- new("Parzen.smoother", Data = user_data, input = user_input_arg, h = user_input_h)
-  show(Parzen.creator(object))
+  show2(Parzen.creator(object))
 }
 
 ################################################################################
