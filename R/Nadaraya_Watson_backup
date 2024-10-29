@@ -39,7 +39,7 @@ setMethod("kernel.smoother", signature = "Estimator1", function (object) {
   n <- nrow(object@data)
   
   Input <- object@input_argument
-  Data <- matrix(data = NA, nrow=nrow(clean_data),ncol=ncol(clean_data))
+  Data <- matrix(data = NA, nrow=nrow(object@data),ncol=ncol(object@data))
   Data <- object@data
   h <- object@H
   
