@@ -36,7 +36,7 @@ setMethod("initialize", "Parzen.smoother",
 
 ################################################################################
 
-setGeneric("Parzen.creator", function(object) {standadardGeneric("Parzen.creator")})
+setGeneric("Parzen.creator", function(object) {standardGeneric("Parzen.creator")})
 setMethod("Parzen.creator", signature= "Parzen.smoother", function(object){
   
   n <- length(object@Data)
@@ -60,7 +60,7 @@ setMethod("Parzen.creator", signature= "Parzen.smoother", function(object){
 
 ################################################################################
 
-setGeneric("show", function(object) {standadardGeneric("show")})
+setGeneric("show", function(object) {standardGeneric("show")})
 setMethod("show", signature = "Parzen.smoother", function(object) {
   
   plot(object@input, object@Probs, type = "p", col = "blue", lwd = 2,
