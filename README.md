@@ -1,4 +1,5 @@
-# Priestley_Chao - Parzen_Rosenblatt - Nadaraya_Watson: KDE functions 
+#             KDE functions:
+# Priestley_Chao - Parzen_Rosenblatt - Nadaraya_Watson 
 
 ## install 
 
