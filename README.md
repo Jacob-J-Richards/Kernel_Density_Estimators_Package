@@ -1,22 +1,16 @@
 # Parzen_Rosenblatt_Package
 
+## install 
 devtools::install_github("Jacob-J-Richards/Kernel_Density_Estimators_Package")
 library(Kernel.Density.Estimators)
 
-we could do multiple functions, one where it just applies the function 
-
-one where it will perform bias variance analysis and provide results for that 
-
-one where it perfors the function but will do so on 800 samples so you get an aproximation that's actually really good 
-
-
-
+## call commands 
 Priestley_Chao(user_data_x,user_data_y,user_input_h,user_input_arg)
 Parzen_Rosenblatt(user_data,user_input_h,user_input)
 Nadaraya_Watson(user_data_x,user_data_y,user_input_h,user_input_arg)
 
 
-test code:
+## test code:
 
     
     x=seq(-3.14,3.14,by=.1)
