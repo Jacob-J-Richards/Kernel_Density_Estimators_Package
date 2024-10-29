@@ -5,7 +5,7 @@
 
 ## Install:
 
-    devtools::install_github("Jacob-J-Richards/Kernel_Density_Estimators_Package")
+    devtools::install_github("Jacob-J-Richards/KDE_Functions_Package")
     
     library(Kernel.Density.Estimators)
 
