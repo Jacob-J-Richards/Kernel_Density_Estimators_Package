@@ -14,7 +14,7 @@
     Nadaraya_Watson(user_data_x,user_data_y,user_input_h,user_input_arg)
     
 
-## test:
+## test code:
 
     Parzen_Rosenblatt(rnorm(100),1,seq(-3,3,length.out=500)) 
 
