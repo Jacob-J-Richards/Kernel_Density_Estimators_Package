@@ -1,9 +1,3 @@
-#' input your arguments as such:
-#' Priestley_Chao(user_data_x,user_data_y,user_input_h,user_input_arg)
-#' 
-#' @export
-Priestley_Chao <- function(user_data_x,user_data_y,user_input_h,user_input_arg) {
-
 ################################################################################
   
 validity.estimator <- function(object) {
@@ -76,12 +70,16 @@ setMethod("show", signature = "estimator", function(object) {
 })
 
 ################################################################################
-
-base_object <- new("estimator", h = user_input_h, x = user_data_x, y = user_data_y, 
-                   MPC=numeric(), input_argument = user_input_arg)
-
-object <- PC.smoother(base_object)
-
-show(object)
-
+#' input your arguments as such:
+#' Priestley_Chao(user_data_x,user_data_y,user_input_h,user_input_arg)
+#' @export
+Priestley_Chao <- function(user_data_x,user_data_y,user_input_h,user_input_arg) {
+  base_object <- new("estimator", h = user_input_h, x = user_data_x, y = user_data_y, 
+                     MPC=numeric(), input_argument = user_input_arg)
+  
+  object <- PC.smoother(base_object)
+  
+  show(object)
 }
+
+################################################################################
