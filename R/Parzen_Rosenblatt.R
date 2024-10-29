@@ -100,3 +100,6 @@ Parzen_Rosenblatt <- function(user_data,user_input_h,user_input_arg) {
 }
 
 ################################################################################
+
+
+Parzen_Rosenblatt(rnorm(100),NA,NA)
