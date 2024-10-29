@@ -64,8 +64,8 @@ setMethod("kernel.smoother", signature = "Estimator3", function (object) {
 
 ################################################################################
 
-setGeneric("show", function(object) {standardGeneric("show")})
-setMethod("show", signature = "Estimator3", function (object){
+setGeneric("show3", function(object) {standardGeneric("show3")})
+setMethod("show3", signature = "Estimator3", function (object){
   cat("output of Estimator", object@MPC, "\n")
   plot(x=object@input_argument,y=object@MPC)
 })
@@ -79,5 +79,5 @@ setMethod("show", signature = "Estimator3", function (object){
 Nadaraya_Watson <- function(user_data_x,user_data_y,user_input_h,user_input_arg) {
 object <- new("Estimator3",H = user_input_h, x_vector = user_data_x, y_vector = user_data_y, input_argument = user_input_arg)
 object_2 <- kernel.smoother(object)
-show(object_2)
+show3(object_2)
 }
