@@ -78,5 +78,5 @@ setMethod("show", signature = "Estimator1", function (object){
 Nadaraya_Watson <- function(user_data_x,user_data_y,user_input_h,user_input_arg) {
 object <- new("Estimator1",H = user_input_h, x_vector = user_data_x, y_vector = user_data_y, input_argument = user_input_arg)
 
-show(kernel.smoother(object))
+show(Nadaraya_Watson(object))
 }
