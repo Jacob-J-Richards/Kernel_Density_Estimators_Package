@@ -1,8 +1,7 @@
 # Parzen_Rosenblatt_Package
 
-devtools::install_github("Jacob-J-Richards/Kernel_Density_Estimators_Package ")
-library(myfirstpackage2)
-
+devtools::install_github("Jacob-J-Richards/Kernel_Density_Estimators_Package")
+library(Kernel.Density.Estimators)
 
 we could do multiple functions, one where it just applies the function 
 
