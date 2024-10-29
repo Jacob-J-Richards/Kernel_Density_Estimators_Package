@@ -1,5 +1,9 @@
 # Parzen_Rosenblatt_Package
 
+devtools::install_github("Jacob-J-Richards/Kernel_Density_Estimators_Package ")
+library(myfirstpackage2)
+
+
 we could do multiple functions, one where it just applies the function 
 
 one where it will perform bias variance analysis and provide results for that 
