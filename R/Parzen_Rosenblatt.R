@@ -60,7 +60,7 @@ setMethod("Parzen.creator", signature= "Parzen.smoother", function(object){
 
 ################################################################################
 
-setGeneric("show", function(object) {standardGeneric("show")})
+setGeneric("show", function(object) { standardGeneric("show")})
 setMethod("show", signature = "Parzen.smoother", function(object) {
   
   plot(object@input, object@Probs, type = "p", col = "blue", lwd = 2,
