@@ -1,4 +1,4 @@
-# (Priestley_Chao - Parzen_Rosenblatt - Nadaraya_Watson) KDE functions 
+# Priestley_Chao - Parzen_Rosenblatt - Nadaraya_Watson: KDE functions 
 
 ## install 
 devtools::install_github("Jacob-J-Richards/Kernel_Density_Estimators_Package")
