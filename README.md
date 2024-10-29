@@ -7,10 +7,12 @@
     library(Kernel.Density.Estimators)
 
 ## call commands 
-Priestley_Chao(user_data_x,user_data_y,user_input_h,user_input_arg)
-Parzen_Rosenblatt(user_data,user_input_h,user_input)
-Nadaraya_Watson(user_data_x,user_data_y,user_input_h,user_input_arg)
-
+    Priestley_Chao(user_data_x,user_data_y,user_input_h,user_input_arg)
+    
+    Parzen_Rosenblatt(user_data,user_input_h,user_input)
+    
+    Nadaraya_Watson(user_data_x,user_data_y,user_input_h,user_input_arg)
+    
 
 ## test code:
 
