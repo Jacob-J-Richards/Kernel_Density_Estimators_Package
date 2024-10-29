@@ -14,7 +14,9 @@
     Nadaraya_Watson(user_data_x,user_data_y,user_input_h,user_input_arg)
     
 
-## test code:
+## test:
+
+    Parzen_Rosenblatt(rnorm(100),1,seq(-3,3,length.out=500)) 
 
     x=seq(-3.14,3.14,by=.1)
     y=cos(x)
@@ -26,8 +28,4 @@
     y=cos(x)
     input = seq(-3.14,3.14,by=.01)
     Priestley_Chao(x,y,1,input)
-
     
-    Parzen_Rosenblatt(rnorm(100),1,seq(-3,3,length.out=500)) 
-    
-
