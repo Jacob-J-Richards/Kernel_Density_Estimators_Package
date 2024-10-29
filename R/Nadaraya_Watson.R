@@ -1,7 +1,7 @@
 
 ################################################################################
 
-setClass("Estimator1", representation( MPC = "numeric",
+setClass("Estimator3", representation( MPC = "numeric",
                                       H = "numeric", 
                                       x_vector = "numeric",
                                       y_vector = "numeric",
@@ -10,7 +10,7 @@ setClass("Estimator1", representation( MPC = "numeric",
 
 ################################################################################
 
-setMethod("initialize", "Estimator1", function(.Object, MPC, H, x_vector, y_vector, input_argument, data) {
+setMethod("initialize", "Estimator3", function(.Object, MPC, H, x_vector, y_vector, input_argument, data) {
   
   raw_data <- cbind(x_vector,y_vector)
   
@@ -33,7 +33,7 @@ setMethod("initialize", "Estimator1", function(.Object, MPC, H, x_vector, y_vect
 ################################################################################
 
 setGeneric("kernel.smoother", function(object) {standardGeneric("kernel.smoother")})
-setMethod("kernel.smoother", signature = "Estimator1", function (object) {
+setMethod("kernel.smoother", signature = "Estimator3", function (object) {
   
   j <- length(object@input_argument)
   n <- nrow(object@data)
@@ -63,8 +63,8 @@ setMethod("kernel.smoother", signature = "Estimator1", function (object) {
 
 ################################################################################
 
-setGeneric("show", function(object) {standardGeneric("show")})
-setMethod("show", signature = "Estimator1", function (object){
+setGeneric("show3", function(object) {standardGeneric("show3")})
+setMethod("show3", signature = "Estimator3", function (object){
   cat("output of Estimator", object@MPC, "\n")
   plot(x=object@input_argument,y=object@MPC)
 })
@@ -76,7 +76,7 @@ setMethod("show", signature = "Estimator1", function (object){
 #' Nadaraya_Watson(user_data_x,user_data_y,user_input_h,user_input_arg)
 #' @export
 Nadaraya_Watson <- function(user_data_x,user_data_y,user_input_h,user_input_arg) {
-object <- new("Estimator1",H = user_input_h, x_vector = user_data_x, y_vector = user_data_y, input_argument = user_input_arg)
+object <- new("Estimator3",H = user_input_h, x_vector = user_data_x, y_vector = user_data_y, input_argument = user_input_arg)
 object_2 <- kernel.smoother(object)
-show(object_2)
+show3(object_2)
 }
