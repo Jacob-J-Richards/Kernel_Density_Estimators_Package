@@ -1,5 +1,5 @@
 
-<h1 align="center"> KDE functions </h1>
+<h1 align="center"> KDE Functions </h1>
 
 <h1 align="center"> Priestley-Chao  |  Parzen-Rosenblatt  |  Nadaraya-Watson </h1>
 
