@@ -1,5 +1,7 @@
-#             KDE functions:
-# Priestley_Chao - Parzen_Rosenblatt - Nadaraya_Watson 
+
+<h1 align="center"> KDE functions </h1>
+
+<h1 align="center"> Priestley-Chao  |  Parzen-Rosenblatt  |  Nadaraya-Watson </h1>
 
 ## install 
 
@@ -17,16 +19,15 @@
 
 ## test code:
 
+    x=seq(-3.14,3.14,by=.1)
+    y=cos(x)
+    input = seq(-3.14,3.14,by=.01)
+    Priestley_Chao(x,y,1,input)
+
     Parzen_Rosenblatt(rnorm(100),1,seq(-3,3,length.out=500)) 
 
     x=seq(-3.14,3.14,by=.1)
     y=cos(x)
     input = seq(-3.14,3.14,by=.01)
     Nadaraya_Watson(x,y,1,x)
-
-  
-    x=seq(-3.14,3.14,by=.1)
-    y=cos(x)
-    input = seq(-3.14,3.14,by=.01)
-    Priestley_Chao(x,y,1,input)
     
