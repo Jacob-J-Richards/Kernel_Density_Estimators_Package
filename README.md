@@ -1,8 +1,10 @@
 # Priestley_Chao - Parzen_Rosenblatt - Nadaraya_Watson: KDE functions 
 
 ## install 
-devtools::install_github("Jacob-J-Richards/Kernel_Density_Estimators_Package")
-library(Kernel.Density.Estimators)
+
+    devtools::install_github("Jacob-J-Richards/Kernel_Density_Estimators_Package")
+    
+    library(Kernel.Density.Estimators)
 
 ## call commands 
 Priestley_Chao(user_data_x,user_data_y,user_input_h,user_input_arg)
