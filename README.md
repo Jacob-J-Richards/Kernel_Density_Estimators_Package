@@ -3,13 +3,13 @@
 
 <h1 align="center"> Priestley-Chao  |  Parzen-Rosenblatt  |  Nadaraya-Watson </h1>
 
-## install 
+## install:
 
     devtools::install_github("Jacob-J-Richards/Kernel_Density_Estimators_Package")
     
     library(Kernel.Density.Estimators)
 
-## call commands 
+## call commands: 
     Priestley_Chao(user_data_x,user_data_y,user_input_h,user_input_arg)
     
     Parzen_Rosenblatt(user_data,user_input_h,user_input)
